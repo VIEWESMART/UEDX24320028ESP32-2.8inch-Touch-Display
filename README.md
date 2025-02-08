@@ -21,7 +21,7 @@
 ## Version iteration:
 |   Development board Version   |  Screen size   |   Resolution  | Update date        |Update description|
 | :-------------------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: |:-------------------------------: |
-| UEDX24320028E-WB-A V1.1 | 2.4ich |  240*320  |2024-12-23      | Original version   |
+| UEDX24320028E-WB-A V1.1 | 2.8ich |  240*320  |2024-12-23      | Original version   |
 
 ## PurchaseLink
 
@@ -41,7 +41,7 @@
 
 ## Describe
 
-UEDX24320028ESP32-2.4inch-Touch-Display is a development board with square 2.4inch 240*320 resolution display, based on ESP32S3, suitable for the development of microcontroller projects with display.
+UEDX24320028ESP32-2.8inch-Touch-Display is a development board with square 2.8inch 240*320 resolution display, based on ESP32S3, suitable for the development of microcontroller projects with display.
 
 
 ## Module
@@ -55,7 +55,7 @@ UEDX24320028ESP32-2.4inch-Touch-Display is a development board with square 2.4in
 
 ### 2. Screen
 
-* Size: 2.4-inch IPS screen
+* Size: 2.8-inch IPS screen
 * Resolution: 240x320px
 * Screen type: IPS
 * Driver chip: GC9307
