@@ -30,6 +30,7 @@
 ├── tools             Burn tool and image conversion tool
 ├── README_CN.md      Chinese version Quick Guide and Product Brief
 └── README.md         English version of the quick guide and product introduction
+```
 
 ## PurchaseLink
 
@@ -94,8 +95,7 @@
     * Search and install `ESP32_Display_Panel` (>= v1.0.0). Select `Yes` for automatic dependency installation.
     * Install the `LVGL` (v8.4.0) library. 
 4. Open the example: `ESP32_Display_Panel`-> `examples` -> `arduino` -> `gui` -> `lvgl_v8`.
-5. Configure the development board:
-    * Edit the `esp_panel_board_supported_conf.h` file.
+5. Configure the `esp_panel_board_supported_conf.h` file:
     * Enable the macro: `#define ESP_PANEL_BOARD_DEFAULT_USE_SUPPORTED  (1)`
     * Uncomment the corresponding screen model definition: `#define BOARD_VIEWE_UEDX24320028E_WB_A`
 6. Select the correct settings in the Tools menu, as shown in the table below:
