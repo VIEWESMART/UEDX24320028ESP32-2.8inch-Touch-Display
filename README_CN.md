@@ -59,7 +59,7 @@
 注：型号由屏幕尺寸和分辨率决定
 
 ### 3.触摸模块
-- 芯片: GT911
+- 芯片: CHSC6540
 - 总线协议: IIC
 - 详细资料：[触摸IC数据手册](information/DS_CHSC6540_V1.0%20Datasheet.pdf)
 
@@ -91,12 +91,12 @@
 1. 安装[Arduino](https://www.arduino.cc/en/software)
 2. 安装ESP32核心：在Board Manager中搜索下载`esp32`（版本>=v3.0.7）
 3. 安装依赖库：
-    * 搜索安装`ESP32_Display_Panel`（v1.0.0），自动安装依赖
+    * 搜索安装`ESP32_Display_Panel`（>= v1.0.0），它的依赖也要全部安装
     * 安装`LVGL`（v8.4.0）库
 4. 打开示例：`ESP32_Display_Panel`-> `examples` -> `arduino` -> `gui` -> `lvgl_v8`
 5. 编辑`esp_panel_board_supported_conf.h`文件：
     * 启用宏定义: `#define ESP_PANEL_BOARD_DEFAULT_USE_SUPPORTED  (1)`
-    * 取消注释屏幕型号定义: `#define BOARD_VIEWE_UEDX80480070E_WB_A`
+    * 取消注释屏幕的型号定义: `#define BOARD_VIEWE_UEDX24320028E_WB_A`
 6. 工具配置（S3）：
     #### ESP32-S3
     | Setting                               | Value                                 |
