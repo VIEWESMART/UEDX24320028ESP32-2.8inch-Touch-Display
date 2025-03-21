@@ -187,7 +187,7 @@
 
 | RGB LED Pin  | ESP32S3 Pin|
 | :------------------: | :------------------:|
-| RGB LED         | IO0(Not Used)   |
+| RGB LED         | IO0   |
 
 | Buzzer Pin  | ESP32S3 Pin|
 | :------------------: | :------------------:|
