@@ -1,7 +1,7 @@
 <h1 align = "center">VIEWE ESP32-S3 Smart Display Quick Guide</h1>
 
 * **[中文版](./README_CN.md)**
-* 
+
 <div align="center">
     <h1 style="font-size: 18px;">Model: UEDX24320028E-WB-A</h1>
     <img src="image/2.8.png" alt="">
