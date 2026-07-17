@@ -31,8 +31,40 @@
 extern "C" {
 #endif
 
-//*************************************************** */
+/*select board - 只能选其一，将其中一个 VIEWE_DISPLAY_* 设为 1，其余设为 0 */
 
+#define VIEWE_DISPLAY_240_320_2_4    0  //2.4inch Display 
+#define VIEWE_DISPLAY_240_320_2_8    0  //2.8inch Display
+#define VIEWE_DISPLAY_240_320_3_5    0  //3.5inch low resolution Display
+#define VIEWE_DISPLAY_320_480_3_5    1  //3.5inch high resolution Display(320*480)
+
+#define VIEWE_DISPLAY_SELECTED_COUNT \
+    (VIEWE_DISPLAY_240_320_2_4 + VIEWE_DISPLAY_240_320_3_5 + \
+     VIEWE_DISPLAY_240_320_2_8 + VIEWE_DISPLAY_320_480_3_5)
+
+#if VIEWE_DISPLAY_SELECTED_COUNT > 1
+#error "只能选择一个屏幕型号，请仅将其中一个 VIEWE_DISPLAY_* 宏设置为 1，其余设为 0"
+#elif VIEWE_DISPLAY_SELECTED_COUNT == 0
+#error "请选择一个屏幕型号，将其中一个 VIEWE_DISPLAY_* 宏设置为 1"
+#endif
+
+#if VIEWE_DISPLAY_320_480_3_5
+/* LCD size */
+#define EXAMPLE_LCD_H_RES   (320)
+#define EXAMPLE_LCD_V_RES   (480)
+
+/* LCD settings */
+#define EXAMPLE_LCD_SPI_NUM         (SPI3_HOST)
+#define EXAMPLE_LCD_PIXEL_CLK_HZ    (80 * 1000 * 1000)
+#define EXAMPLE_LCD_CMD_BITS        (8)
+#define EXAMPLE_LCD_PARAM_BITS      (8)
+#define EXAMPLE_LCD_COLOR_SPACE     (ESP_LCD_COLOR_SPACE_BGR)
+#define EXAMPLE_LCD_BITS_PER_PIXEL  (16)
+#define EXAMPLE_LCD_DRAW_BUFF_DOUBLE (0)
+#define EXAMPLE_LCD_DRAW_BUFF_HEIGHT (80)
+#define EXAMPLE_LCD_BL_ON_LEVEL      (1)
+
+#else
 /* LCD size */
 #define EXAMPLE_LCD_H_RES   (240)
 #define EXAMPLE_LCD_V_RES   (320)
@@ -47,7 +79,7 @@ extern "C" {
 #define EXAMPLE_LCD_DRAW_BUFF_DOUBLE (0)
 #define EXAMPLE_LCD_DRAW_BUFF_HEIGHT (80)
 #define EXAMPLE_LCD_BL_ON_LEVEL      (1)
-
+#endif
 
 // The MCU interface mode select
 #define EXAMPLE_PIN_NUM_IM0             (47)  

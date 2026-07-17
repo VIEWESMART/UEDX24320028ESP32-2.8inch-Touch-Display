@@ -179,9 +179,9 @@ void app_main(void)
     // app_main_display();
     lvgl_port_lock(0);
     // lv_demo_stress();
-    // lv_demo_widgets();
+    lv_demo_widgets();
     // lv_demo_music();
-    create_touch_test_screen();
+    // create_touch_test_screen();
 
     lvgl_port_unlock();
     ESP_ERROR_CHECK(gpio_set_level(EXAMPLE_LCD_GPIO_BL, EXAMPLE_LCD_BL_ON_LEVEL));
